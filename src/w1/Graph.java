@@ -22,6 +22,10 @@ public class Graph {
         adj[w].add(v);
     }
 
+    public int V(){
+        return V;
+    }
+
     public Iterable<Integer> adj(int v)
     { return adj[v]; }
 }
