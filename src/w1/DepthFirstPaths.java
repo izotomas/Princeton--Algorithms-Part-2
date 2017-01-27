@@ -22,6 +22,7 @@ public class DepthFirstPaths {
     private void dfs(Graph G, int v)
     {
         marked[v] = true;
+        System.out.print(v + " ");
         for (int w : G.adj(v)) {
             if (!marked[w]) {
                 dfs(G, w);

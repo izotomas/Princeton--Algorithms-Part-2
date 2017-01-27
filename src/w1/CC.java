@@ -35,9 +35,8 @@ public class CC {
      * @param w
      * @return are v and w connected?
      */
-    boolean connected(int v, int w){
-
-        return false;
+    public boolean connected(int v, int w){
+        return id[w] == id[v];
     }
 
     /**

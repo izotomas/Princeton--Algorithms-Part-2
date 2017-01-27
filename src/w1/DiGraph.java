@@ -1,27 +1,25 @@
 package w1;
+
 import edu.princeton.cs.algs4.Bag;
 
 /**
- * Created by tomasizo on 25/01/2017.
+ * Created by tomasizo on 27/01/2017.
  */
-
-public class Graph {
+public class DiGraph {
     private final int V;
+    private final Bag<Integer>[] adj;
     private int E;
-    private Bag<Integer>[] adj;
 
-    public Graph(int V){
+    public DiGraph(int V){
         this.V = V;
-        E = 0;
+        this.E = 0;
         adj = (Bag<Integer>[]) new Bag[V];
-        for (int v = 0; v < V; v++) {
+        for (int v = 0; v < V; v++)
             adj[v] = new Bag<Integer>();
-        }
     }
 
     public void addEdge(int v, int w){
         adj[v].add(w);
-        adj[w].add(v);
         E++;
     }
 
@@ -32,6 +30,11 @@ public class Graph {
     public int E(){
         return E;
     }
+
+    public DiGraph reverse(){
+        return null;
+    }
+
 
     public Iterable<Integer> adj(int v)
     { return adj[v]; }
