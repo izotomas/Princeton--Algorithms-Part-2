@@ -9,9 +9,7 @@ package assignments.a4_Boggle;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.Queue;
 import edu.princeton.cs.algs4.StdOut;
-
 import java.util.HashSet;
-
 public class BoggleSolver {
     private TwentySixTrieST<Integer> dict;
     private HashSet<String> words;
